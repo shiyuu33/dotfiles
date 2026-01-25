@@ -1,0 +1,50 @@
+shell = "zsh"
+
+# =============================================================================
+# Deferred Loading (for faster shell startup)
+# =============================================================================
+
+# zsh-defer must be loaded first to enable deferred loading for other plugins
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
+# =============================================================================
+# Core Plugins
+# =============================================================================
+
+# Additional completions for common commands
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+# Fish-like autosuggestions based on history
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+# History substring search with arrow keys
+[plugins.zsh-history-substring-search]
+github = "zsh-users/zsh-history-substring-search"
+
+# =============================================================================
+# Productivity
+# =============================================================================
+
+# Abbreviations (like fish shell)
+[plugins.zsh-abbr]
+github = "olets/zsh-abbr"
+
+# Replace tab completion with fzf (interactive fuzzy finder)
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+# =============================================================================
+# Syntax Highlighting (must be loaded last, deferred for speed)
+# =============================================================================
+
+# Real-time command syntax highlighting
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
