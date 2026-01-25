@@ -5,23 +5,25 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-setopt EXTENDED_HISTORY       # Extended history
-setopt AUTO_PUSHD             # Automatically push directories to stack
-setopt share_history          # Share history between terminals
-setopt hist_ignore_dups       # Ignore duplicates
-setopt hist_ignore_all_dups   # Remove older duplicates
-setopt hist_ignore_space      # Ignore commands starting with space
-setopt hist_reduce_blanks     # Remove extra blanks
-setopt inc_append_history     # Add commands immediately
+setopt EXTENDED_HISTORY       # Save timestamp and duration with each command
+setopt AUTO_PUSHD             # Automatically push directories to stack for cd -
+setopt share_history          # Share history between all terminal sessions
+setopt hist_ignore_dups       # Don't record duplicate consecutive commands
+setopt hist_ignore_all_dups   # Remove older duplicates from history
+setopt hist_ignore_space      # Don't record commands starting with space
+setopt hist_reduce_blanks     # Remove superfluous blanks from commands
+setopt inc_append_history     # Add commands to history immediately, not on exit
 
 # =============================================================================
-# Completions
+# Completion System
+# Initialize zsh's powerful tab completion system
 # =============================================================================
 autoload -Uz compinit
 compinit
 
 # =============================================================================
-# initialize
+# Tool Initialization
+# Initialize various command-line tools and plugins
 # =============================================================================
 eval "$(sheldon source)"
 eval "$(fzf --zsh)"

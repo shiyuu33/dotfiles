@@ -1,54 +1,83 @@
-# フォント設定
-font-family = "JetBrains Mono"
-font-size = 14
+# =============================================================================
+# Font Configuration
+# Configure terminal font family and size for optimal readability
+# =============================================================================
+font-family = "JetBrains Mono"  # Monospace font optimized for coding
+font-size = 14                  # Font size in points
 
-# テーマとカラー設定
-theme = "dracula"
-background-opacity = 0.90
-background-blur-radius = 20
-cursor-style = "block"
-cursor-style-blink = true
+# =============================================================================
+# Theme and Visual Settings
+# Configure terminal appearance, colors, and visual effects
+# =============================================================================
+theme = "dracula"               # Color theme (dracula for dark mode)
+background-opacity = 0.90       # Terminal background transparency (0.0-1.0)
+background-blur-radius = 20     # Blur effect behind transparent background
+cursor-style = "block"          # Cursor shape (block, beam, underline)
+cursor-style-blink = true       # Enable cursor blinking animation
 
-# ウィンドウ設定
-window-padding-x = 10
-window-padding-y = 10
-window-decoration = true
-window-inherit-font-size = true
-window-save-state = "always"
-window-inherit-working-directory = false
+# =============================================================================
+# Window Configuration
+# Control window behavior, padding, and state management
+# =============================================================================
+window-padding-x = 10                      # Horizontal padding inside window
+window-padding-y = 10                      # Vertical padding inside window
+window-decoration = true                   # Show window title bar and borders
+window-inherit-font-size = true            # Inherit font size from system
+window-save-state = "always"               # Save window state on close
+window-inherit-working-directory = false   # Don't inherit working directory
 
-# スクロール設定
-scrollback-limit = 50000
-mouse-scroll-multiplier = 4
+# =============================================================================
+# Scrolling Configuration
+# Configure scrollback buffer and mouse scroll behavior
+# =============================================================================
+scrollback-limit = 50000        # Number of lines to keep in scrollback buffer
+mouse-scroll-multiplier = 4     # Mouse scroll speed multiplier
 
-# クリップボード設定
-clipboard-read = "allow"
-clipboard-write = "allow"
-copy-on-select = "clipboard"
+# =============================================================================
+# Clipboard Integration
+# Configure clipboard access and copy behavior
+# =============================================================================
+clipboard-read = "allow"         # Allow reading from system clipboard
+clipboard-write = "allow"        # Allow writing to system clipboard
+copy-on-select = "clipboard"     # Copy selected text to clipboard automatically
 
-# シェル統合
-shell-integration = "zsh"
-shell-integration-features = "cursor,sudo,title"
+# =============================================================================
+# Shell Integration
+# Configure integration with zsh shell for enhanced features
+# =============================================================================
+shell-integration = "zsh"                        # Enable zsh-specific features
+shell-integration-features = "cursor,sudo,title" # Enable cursor, sudo, and title integration
 
-# macOS固有設定
-macos-non-native-fullscreen = false
-macos-option-as-alt = "left"
-macos-window-shadow = true
-macos-titlebar-style = "tabs"
+# =============================================================================
+# macOS Specific Settings
+# Configure macOS-specific terminal behavior and appearance
+# =============================================================================
+macos-non-native-fullscreen = false  # Use native macOS fullscreen mode
+macos-option-as-alt = "left"         # Treat left Option key as Alt
+macos-window-shadow = true           # Enable window drop shadow
+macos-titlebar-style = "tabs"        # Use tab-style title bar
 
-# その他の便利な設定
-confirm-close-surface = false
-quit-after-last-window-closed = true
-focus-follows-mouse = false
+# =============================================================================
+# General Behavior Settings
+# Configure general terminal behavior and user experience
+# =============================================================================
+confirm-close-surface = false           # Don't confirm when closing terminal
+quit-after-last-window-closed = true    # Quit app when last window closes
+focus-follows-mouse = false             # Don't focus window on mouse hover
 
-# キーバインド設定
-keybind = "global:f12=toggle_quick_terminal"
+# =============================================================================
+# Key Bindings
+# Configure custom keyboard shortcuts for terminal operations
+# =============================================================================
 
-# 分割間移動
-keybind = "cmd+h=goto_split:left"
-keybind = "cmd+j=goto_split:bottom"
-keybind = "cmd+k=goto_split:top"
-keybind = "cmd+l=goto_split:right"
+# Global shortcuts
+keybind = "global:f12=toggle_quick_terminal"  # F12 to toggle quick terminal
 
-# Enterで改行
-keybind = "enter=text:\x0d"
+# Split navigation (vim-like)
+keybind = "cmd+h=goto_split:left"    # Navigate to left split
+keybind = "cmd+j=goto_split:bottom"  # Navigate to bottom split
+keybind = "cmd+k=goto_split:top"     # Navigate to top split
+keybind = "cmd+l=goto_split:right"   # Navigate to right split
+
+# Text input
+keybind = "enter=text:\x0d"           # Enter key sends carriage return

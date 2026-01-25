@@ -1,50 +1,60 @@
+# =============================================================================
+# Sheldon Plugin Manager Configuration
+# https://sheldon.cli.rs/
+# =============================================================================
+
 shell = "zsh"
 
 # =============================================================================
-# Deferred Loading (for faster shell startup)
+# Deferred Loading Configuration
+# Enable deferred loading for faster shell startup times
 # =============================================================================
 
 # zsh-defer must be loaded first to enable deferred loading for other plugins
 [plugins.zsh-defer]
-github = "romkatv/zsh-defer"
+github = "romkatv/zsh-defer" 
 
+# Template for deferred loading - delays plugin initialization until after prompt
 [templates]
 defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
 
 # =============================================================================
-# Core Plugins
+# Core Shell Enhancement Plugins
+# Essential plugins that improve the basic zsh experience
 # =============================================================================
 
-# Additional completions for common commands
+# Additional completions for common commands (git, docker, etc.)
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
-# Fish-like autosuggestions based on history
+# Fish-like autosuggestions based on command history
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
 
-# History substring search with arrow keys
+# History substring search with arrow keys (up/down)
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
 
 # =============================================================================
-# Productivity
+# Productivity Enhancement Plugins
+# Plugins that improve command-line productivity and workflow
 # =============================================================================
 
-# Abbreviations (like fish shell)
+# Abbreviations that expand on space (like fish shell abbreviations)
 [plugins.zsh-abbr]
 github = "olets/zsh-abbr"
 
-# Replace tab completion with fzf (interactive fuzzy finder)
+# Replace tab completion with fzf for interactive fuzzy selection
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 
 # =============================================================================
-# Syntax Highlighting (must be loaded last, deferred for speed)
+# Syntax Highlighting
+# Must be loaded last for proper functionality, deferred for startup speed
 # =============================================================================
 
-# Real-time command syntax highlighting
+# Real-time command syntax highlighting (colors commands as you type)
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
 apply = ["defer"]

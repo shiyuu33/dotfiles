@@ -1,7 +1,15 @@
-# コマンド実行時間の表示設定
+# =============================================================================
+# Starship Cross-Shell Prompt Configuration
+# Configure a fast, customizable prompt for any shell
+# =============================================================================
+
+# Global timeout for command execution detection (in milliseconds)
 command_timeout = 1000
 
-# メインフォーマット
+# =============================================================================
+# Main Prompt Format
+# Define the order and structure of prompt elements
+# =============================================================================
 format = """
 $directory\
 $git_branch\
@@ -9,51 +17,68 @@ $git_status\
 $cmd_duration\
 $character"""
 
-# ディレクトリ表示
+# =============================================================================
+# Directory Display Configuration
+# Configure how the current directory is shown in the prompt
+# =============================================================================
 [directory]
-truncation_length = 3
-truncate_to_repo = true
-style = "cyan bold"
-read_only = " 🔒"
+truncation_length = 3      # Show only last 3 directory components
+truncate_to_repo = true     # Show full path within git repositories
+style = "cyan bold"         # Directory color and formatting
+read_only = " 🔒"           # Symbol for read-only directories
 
-# Git ブランチ
+# =============================================================================
+# Git Branch Configuration
+# Display current git branch with custom styling
+# =============================================================================
 [git_branch]
-format = "[$symbol$branch]($style) "
-symbol = " "
-style = "purple bold"
-truncation_length = 20
-truncation_symbol = "…"
+format = "[$symbol$branch]($style) "  # Format: [symbol + branch name]
+symbol = " "                        # Git branch icon
+style = "purple bold"                # Branch name color and formatting
+truncation_length = 20               # Maximum branch name length
+truncation_symbol = "…"              # Symbol for truncated branch names
 
-# Git ステータス
+# =============================================================================
+# Git Status Configuration
+# Show git repository status with various symbols and counts
+# =============================================================================
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "red bold"
-conflicted = "⚡"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-up_to_date = ""
-untracked = "?${count}"
-stashed = "$${count}"
-modified = "!${count}"
-staged = "+${count}"
-renamed = "»${count}"
-deleted = "✘${count}"
+format = '([\[$all_status$ahead_behind\]]($style) )'  # Format: [status symbols]
+style = "red bold"                    # Status indicator color
+conflicted = "⚡"                     # Symbol for merge conflicts
+ahead = "⇡${count}"                  # Commits ahead of remote
+behind = "⇣${count}"                 # Commits behind remote
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"  # Diverged from remote
+up_to_date = ""                      # No symbol when up to date
+untracked = "?${count}"              # Untracked files
+stashed = "$${count}"                # Stashed changes
+modified = "!${count}"               # Modified files
+staged = "+${count}"                 # Staged files
+renamed = "»${count}"                # Renamed files
+deleted = "✘${count}"                # Deleted files
 
-# コマンド実行時間
+# =============================================================================
+# Command Duration Configuration
+# Show execution time for long-running commands
+# =============================================================================
 [cmd_duration]
-min_time = 2000
-format = "took [$duration]($style) "
-style = "yellow bold"
+min_time = 2000                        # Only show duration for commands > 2 seconds
+format = "took [$duration]($style) "    # Format: "took [duration]"
+style = "yellow bold"                  # Duration display color
 
-# プロンプト記号
+# =============================================================================
+# Prompt Character Configuration
+# Configure the main prompt symbol that indicates command input
+# =============================================================================
 [character]
-success_symbol = "[❯](green bold)"
-error_symbol = "[❯](red bold)"
-vicmd_symbol = "[❮](green bold)"
+success_symbol = "[❯](green bold)"  # Symbol after successful commands
+error_symbol = "[❯](red bold)"     # Symbol after failed commands
+vicmd_symbol = "[❮](green bold)"   # Symbol in vi command mode
 
-
-# 不要なモジュールを無効化
+# =============================================================================
+# Disabled Modules
+# Disable modules that are not needed to keep prompt clean and fast
+# =============================================================================
 [battery]
 disabled = true
 
@@ -63,13 +88,19 @@ disabled = true
 [shell]
 disabled = true
 
-# 高速化のための設定
+# =============================================================================
+# Performance and Layout Settings
+# Configure prompt layout and performance optimizations
+# =============================================================================
 [line_break]
 disabled = false
 
-# ジョブ数表示
+# =============================================================================
+# Background Jobs Configuration
+# Show number of background jobs when present
+# =============================================================================
 [jobs]
-format = "[$symbol$number]($style) "
-symbol = "✦"
-style = "blue bold"
-number_threshold = 1
+format = "[$symbol$number]($style) "  # Format: [symbol + job count]
+symbol = "✦"                         # Symbol for background jobs
+style = "blue bold"                  # Job counter color
+number_threshold = 1                 # Show when 1 or more jobs are running
