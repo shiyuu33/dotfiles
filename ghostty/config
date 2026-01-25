@@ -18,7 +18,7 @@ window-save-state = "always"
 window-inherit-working-directory = false
 
 # スクロール設定
-scrollback-limit = 10000
+scrollback-limit = 50000
 mouse-scroll-multiplier = 4
 
 # クリップボード設定
