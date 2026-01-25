@@ -15,10 +15,11 @@ window-padding-y = 10
 window-decoration = true
 window-inherit-font-size = true
 window-save-state = "always"
+window-inherit-working-directory = false
 
 # スクロール設定
 scrollback-limit = 10000
-mouse-scroll-multiplier = 3
+mouse-scroll-multiplier = 4
 
 # クリップボード設定
 clipboard-read = "allow"
