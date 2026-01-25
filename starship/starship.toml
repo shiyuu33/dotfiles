@@ -1,0 +1,75 @@
+# コマンド実行時間の表示設定
+command_timeout = 1000
+
+# メインフォーマット
+format = """
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$character"""
+
+# ディレクトリ表示
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "cyan bold"
+read_only = " 🔒"
+
+# Git ブランチ
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = " "
+style = "purple bold"
+truncation_length = 20
+truncation_symbol = "…"
+
+# Git ステータス
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "red bold"
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = ""
+untracked = "?${count}"
+stashed = "$${count}"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+
+# コマンド実行時間
+[cmd_duration]
+min_time = 2000
+format = "took [$duration]($style) "
+style = "yellow bold"
+
+# プロンプト記号
+[character]
+success_symbol = "[❯](green bold)"
+error_symbol = "[❯](red bold)"
+vicmd_symbol = "[❮](green bold)"
+
+
+# 不要なモジュールを無効化
+[battery]
+disabled = true
+
+[time]
+disabled = true
+
+[shell]
+disabled = true
+
+# 高速化のための設定
+[line_break]
+disabled = false
+
+# ジョブ数表示
+[jobs]
+format = "[$symbol$number]($style) "
+symbol = "✦"
+style = "blue bold"
+number_threshold = 1
