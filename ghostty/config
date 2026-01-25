@@ -1,0 +1,53 @@
+# フォント設定
+font-family = "JetBrains Mono"
+font-size = 14
+
+# テーマとカラー設定
+theme = "dracula"
+background-opacity = 0.90
+background-blur-radius = 20
+cursor-style = "block"
+cursor-style-blink = true
+
+# ウィンドウ設定
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = true
+window-inherit-font-size = true
+window-save-state = "always"
+
+# スクロール設定
+scrollback-limit = 10000
+mouse-scroll-multiplier = 3
+
+# クリップボード設定
+clipboard-read = "allow"
+clipboard-write = "allow"
+copy-on-select = "clipboard"
+
+# シェル統合
+shell-integration = "zsh"
+shell-integration-features = "cursor,sudo,title"
+
+# macOS固有設定
+macos-non-native-fullscreen = false
+macos-option-as-alt = "left"
+macos-window-shadow = true
+macos-titlebar-style = "tabs"
+
+# その他の便利な設定
+confirm-close-surface = false
+quit-after-last-window-closed = true
+focus-follows-mouse = false
+
+# キーバインド設定
+keybind = "global:f12=toggle_quick_terminal"
+
+# 分割間移動
+keybind = "cmd+h=goto_split:left"
+keybind = "cmd+j=goto_split:bottom"
+keybind = "cmd+k=goto_split:top"
+keybind = "cmd+l=goto_split:right"
+
+# Enterで改行
+keybind = "enter=text:\x0d"
