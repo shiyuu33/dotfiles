@@ -2,7 +2,8 @@
 # Font Configuration
 # Configure terminal font family and size for optimal readability
 # =============================================================================
-font-family = "JetBrains Mono"
+font-family = "Menlo"
+font-family = "Hiragino Sans W4"
 font-size = 14
 
 # =============================================================================
@@ -24,7 +25,7 @@ window-padding-y = 10
 window-decoration = true
 window-inherit-font-size = true
 window-save-state = "always"
-window-inherit-working-directory = false
+window-inherit-working-directory = true
 
 # =============================================================================
 # Scrolling Configuration
