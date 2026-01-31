@@ -39,23 +39,53 @@ else
 fi
 
 # =============================================================================
-# Install Required Tools
+# Install GUI Applications (Casks)
 # =============================================================================
-print_info "Installing required tools..."
+print_info "Installing GUI applications..."
 
-# Essential tools
-tools=(
+cask_apps=(
+    "google-chrome"
+    "notion"
+    "discord"
+    "zoom"
+    "slack"
+    "figma"
+    "intellij-idea-ce"
+    "postico"
+    "postman"
+    "claude-code"
+    "ghostty"
+    "raycast"
+)
+
+for app in "${cask_apps[@]}"; do
+    if ! brew list --cask "$app" &> /dev/null; then
+        print_info "Installing $app..."
+        brew install --cask "$app"
+    else
+        print_success "$app is already installed"
+    fi
+done
+
+# =============================================================================
+# Install Command Line Tools
+# =============================================================================
+print_info "Installing command line tools..."
+
+cli_tools=(
     "git"
-    "zsh"
+    "gh"
     "fzf"
     "zoxide"
     "starship"
     "sheldon"
     "mise"
-    "ghostty"
+    "neovim"
+    "mactop"
+    "mas"
 )
 
-for tool in "${tools[@]}"; do
+for tool in "${cli_tools[@]}"; do
     if ! command -v "$tool" &> /dev/null; then
         print_info "Installing $tool..."
         brew install "$tool"
