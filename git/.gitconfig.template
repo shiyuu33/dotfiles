@@ -1,0 +1,78 @@
+# Reference: https://blog.gitbutler.com/how-git-core-devs-configure-git
+# clearly makes git better
+
+[user]
+	# name = YOUR_NAME
+	# email = YOUR_EMAIL
+
+[column]
+	ui = auto
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[init]
+	defaultBranch = main
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+    all = true
+
+# why the hell not?
+
+[help]
+	autocorrect = prompt
+
+[commit]
+	verbose = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[core]
+	excludesfile = ~/.gitignore
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+# a matter of taste (uncomment if you dare)
+
+[core]
+# 	fsmonitor = true
+# 	untrackedCache = true
+
+[merge]
+	conflictstyle = zdiff3
+
+[pull]
+# 	rebase = true
+
+[alias]
+	s = status
+	co = commit
+	br = branch
+	ch = checkout
+	sw = switch
+	st = stash
+	lg = log --oneline --graph --decorate
+	last = log -1 HEAD
+	unstage = reset HEAD --
+	visual = !gitk

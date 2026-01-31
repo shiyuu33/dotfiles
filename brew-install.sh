@@ -56,6 +56,7 @@ cask_apps=(
     "claude-code"
     "ghostty"
     "raycast"
+    "nikitabobko/tap/aerospace"
 )
 
 for app in "${cask_apps[@]}"; do
@@ -83,6 +84,12 @@ cli_tools=(
     "neovim"
     "mactop"
     "mas"
+    "eza"
+    "chezmoi"
+    "jq"
+    "ripgrep"
+    "yazi"
+    "fd"
 )
 
 for tool in "${cli_tools[@]}"; do

@@ -16,14 +16,18 @@ setopt inc_append_history     # Add commands to history immediately, not on exit
 
 # =============================================================================
 # Completion System
-# Initialize zsh's powerful tab completion system
 # =============================================================================
 autoload -Uz compinit
 compinit
 
 # =============================================================================
+# Aliases
+# =============================================================================
+alias la="eza -a --git -g -h --oneline"
+alias ls="eza"
+
+# =============================================================================
 # Tool Initialization
-# Initialize various command-line tools and plugins
 # =============================================================================
 eval "$(sheldon source)"
 eval "$(fzf --zsh)"
