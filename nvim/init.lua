@@ -1,1 +1,2 @@
-require("lua.config.lazy")
+require("shiyuu.core")
+require("shiyuu.lazy")
