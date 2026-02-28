@@ -51,6 +51,7 @@ echo "✓ Configs linked"
 # claude
 link_file "claude/settings.json"    ~/.claude/settings.json
 link_file "claude/.mcp.json"        ~/.claude/.mcp.json
+link_file "claude/statusline.sh"    ~/.claude/statusline.sh
 echo "✓ claude config linked"
 
 # yazi
