@@ -36,7 +36,7 @@ link_file "git/.gitignore"                 ~/.gitignore
 link_file "zsh/.zprofile"                  ~/.zprofile
 link_file "zsh/.zshrc"                     ~/.zshrc
 link_file "sheldon/plugins.toml"           ~/.config/sheldon/plugins.toml
-link_file "mise/config.template.toml"      ~/.config/mise/config.toml
+link_file "mise/config.toml"      ~/.config/mise/config.toml
 echo "✓ Configs linked"
 
 # yazi
@@ -52,8 +52,8 @@ link_dir "nvim" ~/.config/nvim
 echo "✓ nvim config linked"
 
 # aerospace (if exists)
-if [ -f "$DOTFILES_DIR/aerospace/aerospace.template.toml" ]; then
-    link_file "aerospace/aerospace.template.toml" ~/.config/aerospace/aerospace.toml
+if [ -f "$DOTFILES_DIR/aerospace/aerospace.toml" ]; then
+    link_file "aerospace/aerospace.toml" ~/.config/aerospace/aerospace.toml
     echo "✓ aerospace config linked"
 fi
 
