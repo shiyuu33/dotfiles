@@ -30,7 +30,7 @@ alias ls="eza"
 # Functions
 # =============================================================================
 # Load Yazi shell wrapper function
-source "${0:A:h}/functions/yazi.zsh"
+source ~/.config/zsh/functions/yazi.zsh
 
 # =============================================================================
 # Tool Initialization
