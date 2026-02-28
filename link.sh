@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
 
@@ -13,6 +14,10 @@ backup_if_exists() {
 link_file() {
     local src="$DOTFILES_DIR/$1"
     local dest="$2"
+    if [ ! -e "$src" ]; then
+        echo "  ✗ Source not found: $src" >&2
+        return 1
+    fi
     mkdir -p "$(dirname "$dest")"
     backup_if_exists "$dest"
     ln -sf "$src" "$dest"
@@ -21,6 +26,10 @@ link_file() {
 link_dir() {
     local src="$DOTFILES_DIR/$1"
     local dest="$2"
+    if [ ! -d "$src" ]; then
+        echo "  ✗ Source not found: $src" >&2
+        return 1
+    fi
     mkdir -p "$(dirname "$dest")"
     backup_if_exists "$dest"
     ln -sfn "$src" "$dest"
