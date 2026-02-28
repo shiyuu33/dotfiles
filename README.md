@@ -1,5 +1,11 @@
 # dotfiles
 
+## Install Manager
+
+```sh
+./setup.sh
+```
+
 ## Setup
 
 ### 1. Install packages
@@ -16,7 +22,7 @@ brew bundle
 
 Existing files are backed up with a `.backup` suffix.
 
-### 3. Set personal information
+## Set personal information
 
 Create `~/.gitconfig.local` with your git user info:
 
