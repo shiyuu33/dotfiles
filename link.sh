@@ -48,6 +48,11 @@ link_file "sheldon/plugins.toml"           ~/.config/sheldon/plugins.toml
 link_file "mise/config.toml"      ~/.config/mise/config.toml
 echo "✓ Configs linked"
 
+# claude
+link_file "claude/settings.json"    ~/.claude/settings.json
+link_file "claude/.mcp.json"        ~/.claude/.mcp.json
+echo "✓ claude config linked"
+
 # yazi
 link_file "yazi/yazi.toml"          ~/.config/yazi/yazi.toml
 echo "✓ yazi config linked"
