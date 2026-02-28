@@ -30,16 +30,17 @@ echo "=== dotfiles link ==="
 
 # Configs
 link_file "ghostty/config"         ~/.config/ghostty/config
-link_file "starship/starship.template.toml" ~/.config/starship.toml
-link_file "git/.gitconfig"         ~/.gitconfig
-link_file "git/.gitignore"         ~/.gitignore
-link_file "zsh/.zshrc"            ~/.zshrc
-link_file "sheldon/plugins.template.toml"  ~/.config/sheldon/plugins.toml
+link_file "starship/starship.toml"         ~/.config/starship.toml
+link_file "git/.gitconfig"                 ~/.gitconfig
+link_file "git/.gitignore"                 ~/.gitignore
+link_file "zsh/.zprofile"                  ~/.zprofile
+link_file "zsh/.zshrc"                     ~/.zshrc
+link_file "sheldon/plugins.toml"           ~/.config/sheldon/plugins.toml
 link_file "mise/config.template.toml"      ~/.config/mise/config.toml
 echo "✓ Configs linked"
 
 # yazi
-link_file "yazi/yazi.template.toml" ~/.config/yazi/yazi.toml
+link_file "yazi/yazi.toml"          ~/.config/yazi/yazi.toml
 echo "✓ yazi config linked"
 
 # zsh functions
