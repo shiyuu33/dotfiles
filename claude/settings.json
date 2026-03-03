@@ -39,10 +39,6 @@
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh"
-  },
   "enabledPlugins": {
     "pr-review-toolkit@claude-plugins-official": true,
     "serena@claude-plugins-official": true,
