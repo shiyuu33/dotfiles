@@ -13,8 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
   {
     { import = "shiyuu.plugins" },
+    { import = "shiyuu.plugins.lsp" }
   },
   {
+    rocks = {
+      enabled = false,
+    },
     checker = {
       enabled = true,
       notify = false,
