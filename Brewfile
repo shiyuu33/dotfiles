@@ -24,6 +24,7 @@ cask "nikitabobko/tap/aerospace"
 # Command Line Tools (Formulae)
 brew "git"
 brew "gh"
+brew "lazygit"
 brew "fzf"
 brew "zoxide"
 brew "starship"
