@@ -8,7 +8,6 @@ return {
     local substitute = require("substitute")
 
     substitute.setup()
-    local keymap = vim.keymap
 
     vim.keymap.set("n", "s", substitute.operator, { desc = "Substitute with motion" })
     vim.keymap.set("n", "ss", substitute.line, { desc = "Substitute line" })
