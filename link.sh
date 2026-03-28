@@ -65,6 +65,10 @@ echo "✓ zsh functions linked"
 link_dir "nvim" ~/.config/nvim
 echo "✓ nvim config linked"
 
+# Brewfile
+link_file "Brewfile" ~/Brewfile
+echo "✓ Brewfile linked"
+
 # aerospace (if exists)
 if [ -f "$DOTFILES_DIR/aerospace/aerospace.toml" ]; then
     link_file "aerospace/aerospace.toml" ~/.config/aerospace/aerospace.toml
