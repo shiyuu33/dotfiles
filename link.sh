@@ -69,12 +69,6 @@ echo "✓ nvim config linked"
 link_file "Brewfile" ~/Brewfile
 echo "✓ Brewfile linked"
 
-# aerospace (if exists)
-if [ -f "$DOTFILES_DIR/aerospace/aerospace.toml" ]; then
-    link_file "aerospace/aerospace.toml" ~/.config/aerospace/aerospace.toml
-    echo "✓ aerospace config linked"
-fi
-
 # PATH check
 if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
     echo ""

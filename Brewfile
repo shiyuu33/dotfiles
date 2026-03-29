@@ -1,47 +1,45 @@
-# =============================================================================
-# Homebrew Bundle File (Brewfile)
-# Manage packages declaratively with `brew bundle`
-# =============================================================================
-
-# Taps (Third-party repositories)
 tap "nikitabobko/tap"
-
-# GUI Applications (Casks)
-cask "google-chrome"
-cask "notion"
-cask "discord"
-cask "zoom"
-cask "slack"
-cask "figma"
-cask "intellij-idea-ce"
-cask "postico"
-cask "postman"
-cask "claude-code"
-cask "ghostty"
-cask "raycast"
-cask "nikitabobko/tap/aerospace"
-
-# Command Line Tools (Formulae)
-brew "git"
-brew "gh"
-brew "lazygit"
-brew "fzf"
-brew "zoxide"
-brew "starship"
-brew "sheldon"
-brew "mise"
-brew "neovim"
-brew "mactop"
-brew "mas"
-brew "eza"
+brew "libpng"
 brew "chezmoi"
-brew "jq"
-brew "ripgrep"
-brew "yazi"
+brew "code2prompt"
+brew "eza"
 brew "fd"
 brew "ffmpeg"
-brew "sevenzip"
+brew "fzf"
+brew "gemini-cli"
+brew "gh"
+brew "git"
+brew "graphviz"
+brew "imagemagick"
+brew "jq"
+brew "lazygit"
+brew "luarocks"
+brew "mactop"
+brew "mas"
+brew "mise"
+brew "neovim"
+brew "picocom"
+brew "pkgconf"
 brew "poppler"
 brew "resvg"
-brew "imagemagick"
+brew "ripgrep"
+brew "sevenzip"
+brew "sheldon"
+brew "starship"
+brew "tmux"
+brew "tree-sitter"
+brew "tree-sitter-cli"
+brew "wget"
+brew "yazi"
+brew "zoxide"
+cask "claude-code"
 cask "font-symbols-only-nerd-font"
+cask "ghostty"
+cask "temurin"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Kindle", id: 302584613
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
