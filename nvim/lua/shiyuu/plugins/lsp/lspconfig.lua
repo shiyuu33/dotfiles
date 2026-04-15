@@ -9,7 +9,6 @@ return {
   config = function()
     local lspconfig = require("lspconfig")
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
-    local mason_lspconfig = require("mason-lspconfig")
 
     local keymap = vim.keymap
 
@@ -69,27 +68,30 @@ return {
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    mason_lspconfig.setup_handlers({
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["lua_ls"] = function()
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
+    local servers = {
+      "gopls", "tailwindcss", "ts_ls", "html", "cssls",
+      "dockerls", "docker_compose_language_service", "emmet_ls",
+      "prismals", "pyright",
+    }
+
+    for _, server_name in ipairs(servers) do
+      lspconfig[server_name].setup({
+        capabilities = capabilities,
+      })
+    end
+
+    lspconfig["lua_ls"].setup({
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = { "vim" },
           },
-        })
-      end,
+          completion = {
+            callSnippet = "Replace",
+          },
+        },
+      },
     })
   end,
 }
