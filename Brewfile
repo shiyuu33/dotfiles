@@ -32,21 +32,19 @@ brew "tree-sitter-cli"
 brew "wget"
 brew "yazi"
 brew "zoxide"
+cask "android-studio"
 cask "claude-code"
+cask "discord"
 cask "docker-desktop"
 cask "figma"
 cask "font-symbols-only-nerd-font"
 cask "ghostty"
 cask "google-chrome"
+cask "intellij-idea"
 cask "notion"
 cask "raycast"
 cask "slack"
 cask "temurin"
 cask "zoom"
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
 mas "Kindle", id: 302584613
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "Xcode", id: 497799835
